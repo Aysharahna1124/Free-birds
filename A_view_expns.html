@@ -1,0 +1,21 @@
+
+{% extends 'temp/admin_home.html' %}
+{% block base %}
+<h1 align="center">VIEW EXPENSES</h1>
+	<table align="center" border="1" class="table table-bordered">
+		<tr style="font-weight: bolder">
+			<td>EXPENSE</td>
+			<td>AMOUNT</td>
+			<td>DATE</td>
+		</tr>
+        {% if objval %}
+        {% for obj in objval %}
+		<tr>
+			<td>{{ obj.expense }}</td>
+			<td>{{ obj.amount }}</td>
+			<td>{{ obj.date }}</td>
+			</tr>
+    {% endfor %}
+    {% endif %}
+    </table>
+{% endblock %}
